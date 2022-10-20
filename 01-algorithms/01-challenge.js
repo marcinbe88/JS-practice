@@ -10,4 +10,4 @@ function reverseText(str) {
 console.log(reverseText("triathlon"))
 console.log(reverseText(1231232))
 console.log(reverseText(true))
-console.log(reverseText("M"))
+console.log(reverseText("Marcin"))
