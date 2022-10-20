@@ -1,7 +1,7 @@
 function reverseText(str) {
     if (typeof str === "string") {
-     const result = str.split("").reverse().join("")
-     return result
+        const result = str.split("").reverse().join("")
+        return result
     } else {
         return 'Wrong data! Not a text!'
     }
