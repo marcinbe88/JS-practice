@@ -1,2 +1,2 @@
-# JS-review
+# JS-practice
 Practicing JS tasks
