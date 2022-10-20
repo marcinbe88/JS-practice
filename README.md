@@ -1,2 +1,2 @@
 # JS-practice
-Practicing JS tasks
+Practicing JS tasks :)
