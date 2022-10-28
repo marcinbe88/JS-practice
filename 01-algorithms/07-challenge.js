@@ -3,7 +3,7 @@ function tagFinder(string) {
     const stringArray = string.split(" ")
 
     for (let i = 0; i < stringArray.length; i++) {
-        if (stringArray[i][0] === '#') {
+        if (stringArray[i].includes('#')) {
             const hashtagArray = stringArray[i].split("")
             const hashtagWord = hashtagArray.slice(1).join("")
             result.push(hashtagWord)
