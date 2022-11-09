@@ -9,5 +9,4 @@ function flat(arr) {
     }
     console.log(result)   
 }
-
 flat([1, [2, 3, undefined, 4, 2], [1, 'Dominik', null, 5], 3, ['Dominik', 6]])
