@@ -5,15 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Challenge 02</title>
+    <style>
+      section {
+        display: flex;
+        flex-direction: row;
+        margin-left: 50px;
+      }
+      #toast-button {
+        background-color: yellow;
+        color: blue;
+        width: 260px;
+        height: 60px;
+        font-size: 18px;
+        border-radius: 15px;
+        font-weight: bold;
+        margin-top: 250px;
+      }
+    </style>
     <script src="02-challenge.js"></script>
   </head>
   <body>
-    <button
-      style = "width: 300px; height: 100px; margin-top: 400px; margin-left: 200px;
-      background-color: yellow; color: blue"
-      id = "toast-button"
-    >
-      Show toast message
-    </button>
+    <section id="section">
+      <div><button id="toast-button">Click to support Ukraine!</button></div>
+      <div id="element"></div>
+    </section>
   </body>
 </html>
