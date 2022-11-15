@@ -1,11 +1,8 @@
-const button = document.getElementById("toast-button")
-
-function displayToastMessage() {
-
+function displayToastMessage(text) {
+    const el = document.getElementById("element")
+    el.firstChild.nodeValue = text
     console.log('dziala')
 }
 
-button.onclick = function() {
-    console.log('dziala')
-}
-// button.addEventListener('click', displayToastMessage())
+const toastButton = document.getElementById("toast-button")
+toastButton.addEventListener('click', () => {displayToastMessage("dupa")})
