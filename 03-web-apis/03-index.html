@@ -7,23 +7,48 @@
     <title>Challenge 3 - dark mode</title>
     <style>
         body {
-            background-color:blue;
-            color: yellow;
+            background-color:white;
+            color: black;
+            margin: 0 auto;
         }
         #main-text {
             font-size: 30px;
             width: 500px;
             height: 200px;
-            margin: 200px;
+            margin: 0 auto;
+        }
+        button {
+            position: relative;
+            background: black;
+            color:white; 
+            font-size: 20px;
+            margin-left: 500px;
+            margin-top: 50px;
+            width: 180px;
+            height: 80px;
+            border-radius: 20px;
+        }
+        .dark-theme {
+            background-color: black;
+            color: white;
+        }
+        .white-button {
+            background-color: white;
+            color: black;
         }
     </style>
-    <script src = "03-challenge.js"></script>
+    
   </head>
   <body>
+    <button id = "change-button">Change theme</button>
     <div id = "main-text">
+        <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam officiis
         libero similique asperiores velit et, nostrum cum possimus qui? Ex, numquam
         molestias! Reiciendis fuga repellendus molestiae suscipit quasi, aut hic.
+        </p>
+        
     </div>
+    <script src = "03-challenge.js"></script>
   </body>
 </html>
