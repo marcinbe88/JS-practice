@@ -1,0 +1,22 @@
+body {
+    padding-left: 20px;
+  }
+  
+  #users-list {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: repeat(3, 33%);
+    background-color: rgb(0, 115, 255);
+    margin: 20px;
+  }
+  
+  #users-list > div {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1;
+    align-items: center;
+    justify-items: center;
+    margin: 10px;
+    padding: 20px;
+    background-color: white;
+  }
