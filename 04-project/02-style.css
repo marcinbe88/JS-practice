@@ -1,0 +1,43 @@
+body {
+  justify-content: center;
+  background-color: khaki;
+}
+
+h1 {
+  margin-top: 30px;
+  color: blue;
+  display: flex;
+  color: black;
+  justify-content: center;
+  font-family: "Play", sans-serif;
+}
+
+#btn-div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#add-note-btn {
+  font-size: 16px;
+  color: white;
+  background-color: rgb(128, 206, 10);
+  font-family: "Play", sans-serif;
+  width: 100px;
+  height: 40px;
+  border-radius: 12px;
+  position: relative;
+}
+
+#notes-section {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 2;
+  align-items: center;
+  justify-items: center;
+}
+
+#note-box {
+  height: 500px;
+  width: 300px;
+  background-color: grey;
+}
