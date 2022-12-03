@@ -1,5 +1,4 @@
 body {
-  justify-content: center;
   background-color: khaki;
 }
 
@@ -37,7 +36,20 @@ h1 {
 }
 
 #note-box {
-  height: 500px;
-  width: 300px;
+  margin: 10px;
+  height: 400px;
+  width: 250px;
   background-color: grey;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+#input-section {
+  font-size: 18px;
+  margin: 0 auto;
+  border-radius: 12px;
+  margin-top: 50px;
+  height: 350px;
+  width: 250px;
 }
