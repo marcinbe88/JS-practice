@@ -5,21 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Challenge 01 - GitHub profiles</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Play&display=swap");
+    </style>
     <link rel="stylesheet" href="01-style.css" />
 </head>
 <body>
-    <input id = "search-user" type = "text" value = "Search a GitHub User">
+    <form>
+        <input id = "search-user" type = "text" placeholder = "Search a GitHub User"/>
+    </form>
     <div id = "user-info-box">
-        <div id = "user-photo">Picture</div>
+        <div id = "user-photo"></div>
         <div id = "user-info">
-            <div id = "name"><h2>Name</h2></div>
-            <div id = "description"><p>Description</p></div>
+            <h2><div id = "name"></div></h2>
+            <div id = "description"><p></p></div>
             <div id = "follow-repo"> 
-                <div id = "followers"><p>Followers</p></div>
-                <div id = "following"><p>Following</p></div>
-                <div id = "repos"><p>Repos</p></div>
+                <div id = "followers"><p></p></div>
+                <div id = "following"><p></p></div>
+                <div id = "repos"><p></p></div>
             </div>
-            <div id = "repositories-links"><p>Repositories - links</p></div>
+            <div id = "repositories-links"><p></p></div>
 
         </div>
     </div>
