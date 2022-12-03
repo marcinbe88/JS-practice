@@ -1,47 +1,53 @@
 // const searchUser = document.getElementById("search-user")
+// console.log(searchUser.value)
 
-const USER_NAME = "iamshaunjp"
+const USER_NAME = "iamshaunjp";
 
 fetch(`https://api.github.com/users/${USER_NAME}`)
   .then((res) => res.json())
   .then((user) => {
-        const userPhoto = document.getElementById("user-photo")
-        const userName = document.getElementById("name")
-        const userDescription = document.getElementById("description")
-        const userFollowers = document.getElementById("followers")
-        const userFollowing = document.getElementById("following")
-        const userRepos= document.getElementById("repos")
-        
-        userName.append(user.name)
-        userPhoto.innerHTML = `<img src = ${user.avatar_url} width="200px">`
-        if (user.bio) {
-            userDescription.append(user.bio)
-        } else {
-            userDescription.append("Description not provided")
-        }
+    const userInfo = document.getElementById("user-info");
+    const userPhoto = document.getElementById("user-photo");
 
-        userFollowers.append(`Followers: ${user.followers}`)
-        userFollowing.append(`Following: ${user.following}`)
-        userRepos.append(`Repos: ${user.public_repos}`)
-        
-        fetch(`https://api.github.com/users/${USER_NAME}/repos`)
-            .then((res) => res.json())
-            .then((repos) => {
-                const reposToDisplay = repos.slice(0, 3)
-                
-                reposToDisplay.forEach((repo) => {
-                    const reposLink = document.getElementById("repositories-links")
-                    const repoName = repo.name
-                    reposLink.innerText = `${repoName}`
-                    reposLink.innerHTML = `
-                    <a href = https://github.com/${USER_NAME}/${repoName}>${repoName}</a>
-                    `
-                })
-            })
+    const userName = document.createElement("h2");
+    const userDescription = document.createElement("h3");
+    const userFollowers = document.createElement("p");
+    const userFollowing = document.createElement("p");
+    const userRepos = document.createElement("p");
 
+    userName.innerText = user.name;
+    userPhoto.innerHTML = `<img src = ${user.avatar_url} width="200px">`;
 
+    if (user.bio) {
+      userDescription.innerText = user.bio;
+    } else {
+      userDescription.innerText = "Description not provided";
+    }
 
-console.log(USER_NAME)
-console.log
+    userFollowers.innerText = `${user.followers} followers`;
+    userFollowing.innerText = `${user.following} following`;
+    userRepos.innerText = `${user.public_repos} repos`;
 
-  })
+    userInfo.append(
+      userName,
+      userDescription,
+      userFollowers,
+      userFollowing,
+      userRepos
+    );
+
+    fetch(`https://api.github.com/users/${USER_NAME}/repos`)
+      .then((res) => res.json())
+      .then((repos) => {
+        const reposToDisplay = repos.slice(0, 3);
+
+        reposToDisplay.forEach((repo) => {
+          const publicRepoLink = document.createElement("a");
+          const repoName = repo.name;
+          publicRepoLink.innerText = `${repoName}`;
+          publicRepoLink.href = `https://github.com/${USER_NAME}/${repoName}`;
+
+          userInfo.append(publicRepoLink);
+        });
+      });
+  });
