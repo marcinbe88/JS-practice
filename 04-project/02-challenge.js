@@ -19,5 +19,4 @@ function createNewNote() {
 
 function deleteNote() {
     console.log('delete note!')
-    delete notesSection
 }
