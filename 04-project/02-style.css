@@ -41,8 +41,6 @@ h1 {
   width: 400px;
   background-color: grey;
   border-radius: 12px;
-  display: flex;
-  justify-content: center;
 }
 
 #input-section {
@@ -52,4 +50,15 @@ h1 {
   margin-top: 50px;
   height: 300px;
   width: 400px;
+}
+
+#delete-btn {
+  font-size: 16px;
+  color: white;
+  background-color: red;
+  font-family: "Play", sans-serif;
+  width: 80px;
+  height: 40px;
+  border-radius: 12px;
+  position: absolute;
 }
